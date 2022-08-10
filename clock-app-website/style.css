@@ -1,0 +1,120 @@
+/*Attempting to set up some settings for the whole document */
+html * {
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Css for the background of the body as well as width*/
+body {
+    background-color: #403233;
+    width: 100%;
+    height: 100%;
+    color: #d4d4d4;
+}
+
+/* Setting font types for h2 used in  */
+h2 {
+    font-weight: 600;
+    font-size: 3em;
+    text-align: center;
+}
+
+
+/* A fixed header at the top of the page that allows
+users to navigate using display flex to display links in responsive way*/
+.flex-header {
+    position: fixed;
+    background-color: #403233;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 85px;
+    box-shadow: 0 15px 0 0 #5f4b4c;
+}
+
+/* The links and their attributes that 
+using flex shrink and basis to set the elements to their desired way */
+.flex-header a {
+    font-weight: 900;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #d4d4d4;
+    flex: 0 1 45%;
+    height: 85px;
+    line-height: 85px;
+}
+
+/* Adds an animation when the cursor/user is looking at the 
+elements to change colour and show the user what they are interacting with 
+(Will be used on clock face to reveal the gears beneath when creating final page.*/
+.flex-header a:hover {
+    transition-timing-function: ease-in;
+    transition-duration: 500ms;
+    color: #52082a;
+    background: #a31053;
+    height: 85px;
+    box-shadow: 0 15px 0 0 #52082a;
+}
+
+/* The main element that has a flex display to 
+enable its divs to have flex and be responsive in their row format */
+#main-page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+/* The col class is used on all of the rows to give them a standard height and width*/
+.col {
+    height: 1000px;
+    width: 100%;
+}
+
+/* Clock element contains the clockface so needs a 
+display flex and padding to put the clockface within it and give it a flex attribute*/
+.clock {
+    flex: 1;
+    display: flex;
+    padding: 10%;
+}
+
+/* using width to move with the flex and object fit to stay in the same aspect ratio */
+.clock img {
+    height: auto;
+    width: 100%;
+    flex: 1;
+    object-fit: contain;
+}
+
+/* about needs new background colour to provide contrast and 
+clear sense of continuation. Is flex when the real website is 
+implemented will move with text inside of it */
+.about {
+    background-color: #d4d4d4;
+    color: #403233;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5%;
+}
+
+/* How to use class that does same as about class above it just without the background change. */
+.how-to-use {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5%;
+}
